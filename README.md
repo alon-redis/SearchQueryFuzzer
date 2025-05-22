@@ -174,3 +174,9 @@ tar vxfz unstable.tar.gz
 cd redis-unstable/
 make && make install
 ```
+### installing deps might be required
+```bash
+cd deps
+make hiredis jemalloc linenoise lua geohash-int
+cd ..
+```
