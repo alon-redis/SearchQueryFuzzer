@@ -165,23 +165,12 @@ The fuzzer generates three types of reports:
 
 Reports are generated in both JSON and HTML formats.
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Redis Search team for their excellent documentation
-- The fuzzing community for inspiration and best practices
-
-## Support
-
-For issues, feature requests, or questions, please open an issue in the GitHub repository. 
+## Redis installation
+```bash
+apt-get update &&  apt-get upgrade -V
+apt-get -y install make gcc
+wget https://github.com/redis/redis/archive/unstable.tar.gz
+tar vxfz unstable.tar.gz
+cd redis-unstable/
+make && make install
+```
