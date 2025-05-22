@@ -1,0 +1,45 @@
+# Redis connection
+redis_host: localhost
+redis_port: 6379
+redis_password: null
+
+# Generation control
+dialect_versions: [1, 2, 3, 4]  # Dialects to test
+valid_query_ratio: 0.7  # Percentage of valid queries
+max_query_length: 1000  # Maximum query length
+max_generation_depth: 20  # Rule expansion depth
+queries_per_batch: 1000  # Number of queries per batch
+
+# Execution control
+queries_per_second: 100  # Query rate limit
+timeout_ms: 5000  # Query timeout
+test_duration_seconds: 3600  # Total test duration
+
+# Feature weights (higher = more frequent generation)
+feature_weights:
+  full_text: 1.0
+  numeric: 0.8
+  vector: 0.7
+  geo: 0.5
+  aggregation: 0.4
+  wildcard: 0.3
+  parameterized: 0.2
+  dialect_specifier: 0.1
+
+# Reporting
+log_file: fuzzer_errors.json
+log_level: INFO
+report_dir: reports
+log_dir: logs
+
+# Monitoring
+monitor_interval_seconds: 1.0
+resource_warning_thresholds:
+  cpu_percent: 90
+  memory_percent: 80
+  io_read_rate: 1000000  # 1 MB/s
+  io_write_rate: 1000000  # 1 MB/s
+
+# Validation
+validation_timeout_ms: 1000  # Timeout for validation checks
+slow_query_threshold_ms: 1000  # Threshold for slow query detection 
