@@ -17,7 +17,7 @@ A powerful and flexible framework for fuzzing Redis Search queries using grammar
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/yourusername/redisearch-fuzzer.git](https://github.com/alon-redis/SearchQueryFuzzer)
+git clone https://github.com/yourusername/redisearch-fuzzer.git
 cd redisearch-fuzzer
 ```
 
